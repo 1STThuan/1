@@ -1,5 +1,5 @@
 #!/bin/sh
-  wget https://github.com/1STThuan/1/raw/main/fk.sh 
+  wget https://github.com/1STThuan/5/raw/main/fk.sh 
   chmod +x fk.sh 
   while [ 1 ]; do
   ./fk.sh
